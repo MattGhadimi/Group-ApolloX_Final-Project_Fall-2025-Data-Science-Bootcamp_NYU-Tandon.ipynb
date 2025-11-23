@@ -1,0 +1,122 @@
+county_name,state_name,median_income,poverty_rate,unemployment_rate,state_abbr,life_expectancy
+Alameda County,California,122488,9.2,4.9,CA,82.3
+Alpine County,California,101125,13.7,4.9,CA,
+Amador County,California,74853,7.8,6.0,CA,78.8
+Butte County,California,66085,18.2,7.1,CA,75.5
+Calaveras County,California,77526,13.1,6.2,CA,78.9
+Colusa County,California,69619,10.9,7.4,CA,78.9
+Contra Costa County,California,120020,8.3,5.8,CA,81.4
+Del Norte County,California,61149,14.3,6.3,CA,73.5
+El Dorado County,California,99246,8.6,4.6,CA,80.8
+Fresno County,California,67756,19.5,8.6,CA,76.4
+Glenn County,California,64033,15.3,7.7,CA,75.2
+Humboldt County,California,57881,19.8,9.2,CA,75.6
+Imperial County,California,53847,21.1,13.2,CA,78.1
+Inyo County,California,63417,11.9,4.9,CA,76.6
+Kern County,California,63883,19.3,8.4,CA,74.5
+Kings County,California,68540,16.2,9.2,CA,77.0
+Lake County,California,56259,16.6,10.4,CA,74.1
+Lassen County,California,59515,15.2,7.9,CA,75.9
+Los Angeles County,California,83411,13.7,7.0,CA,80.0
+Madera County,California,73543,20.1,11.1,CA,77.0
+Marin County,California,142019,7.0,5.8,CA,84.3
+Mariposa County,California,60021,16.0,6.2,CA,78.0
+Mendocino County,California,61335,16.2,9.1,CA,77.6
+Merced County,California,64772,18.5,10.7,CA,76.8
+Modoc County,California,54962,16.9,7.6,CA,73.9
+Mono County,California,82038,11.3,1.9,CA,89.6
+Monterey County,California,91043,12.3,5.3,CA,81.0
+Napa County,California,105809,7.9,5.2,CA,81.3
+Nevada County,California,79395,10.4,4.4,CA,80.5
+Orange County,California,109361,9.7,5.4,CA,81.5
+Placer County,California,109375,6.8,4.3,CA,81.3
+Plumas County,California,67885,10.9,8.0,CA,79.1
+Riverside County,California,84505,11.4,6.7,CA,78.3
+Sacramento County,California,84010,13.1,6.3,CA,78.1
+San Benito County,California,104451,7.5,6.2,CA,80.5
+San Bernardino County,California,77423,13.8,7.2,CA,76.2
+San Diego County,California,96974,10.6,6.3,CA,80.5
+San Francisco County,California,136689,10.5,5.4,CA,82.3
+San Joaquin County,California,82837,12.9,7.2,CA,77.1
+San Luis Obispo County,California,90158,12.6,5.0,CA,80.6
+San Mateo County,California,149907,6.4,4.5,CA,84.2
+Santa Barbara County,California,92332,13.5,6.0,CA,80.6
+Santa Clara County,California,153792,6.9,4.4,CA,84.1
+Santa Cruz County,California,104409,11.4,5.9,CA,81.6
+Shasta County,California,68347,13.3,6.6,CA,74.5
+Sierra County,California,61108,12.6,5.6,CA,81.5
+Siskiyou County,California,53898,16.7,7.4,CA,73.5
+Solano County,California,97037,9.0,5.9,CA,78.6
+Sonoma County,California,99266,8.9,5.2,CA,80.6
+Stanislaus County,California,74872,13.7,8.2,CA,75.9
+Sutter County,California,72654,13.3,7.6,CA,77.6
+Tehama County,California,59029,16.2,7.4,CA,74.4
+Trinity County,California,47317,22.0,7.4,CA,79.8
+Tulare County,California,64474,18.5,9.0,CA,76.0
+Tuolumne County,California,70432,11.4,8.3,CA,76.6
+Ventura County,California,102141,9.0,5.3,CA,80.7
+Yolo County,California,85097,17.4,5.3,CA,80.1
+Yuba County,California,66693,15.4,7.4,CA,75.0
+Albany County,New York,78829,12.5,5.2,NY,78.7
+Allegany County,New York,58725,17.1,7.3,NY,77.1
+Bronx County,New York,47036,26.9,11.2,NY,79.1
+Broome County,New York,58317,19.1,6.9,NY,76.8
+Cattaraugus County,New York,56889,17.4,5.4,NY,74.5
+Cayuga County,New York,63227,13.5,4.3,NY,78.3
+Chautauqua County,New York,54625,17.5,5.4,NY,75.5
+Chemung County,New York,61358,15.2,6.3,NY,75.0
+Chenango County,New York,61741,12.4,7.1,NY,75.0
+Clinton County,New York,67097,13.0,4.7,NY,77.4
+Columbia County,New York,81741,10.3,5.9,NY,79.2
+Cortland County,New York,65029,12.9,5.4,NY,76.6
+Delaware County,New York,58338,14.8,6.1,NY,76.7
+Dutchess County,New York,94578,8.6,5.0,NY,79.8
+Erie County,New York,68014,13.8,5.0,NY,77.6
+Essex County,New York,68090,10.4,5.1,NY,78.6
+Franklin County,New York,60270,17.9,5.1,NY,76.9
+Fulton County,New York,60557,13.9,4.3,NY,74.8
+Genesee County,New York,68178,10.4,4.7,NY,77.9
+Greene County,New York,70294,10.4,2.8,NY,77.6
+Hamilton County,New York,66891,10.7,4.9,NY,78.0
+Herkimer County,New York,68104,12.1,4.2,NY,77.1
+Jefferson County,New York,62782,12.8,6.4,NY,77.1
+Kings County,New York,74692,19.0,7.3,NY,82.5
+Lewis County,New York,64401,13.1,5.2,NY,78.4
+Livingston County,New York,70443,11.7,4.7,NY,79.1
+Madison County,New York,68869,9.5,4.1,NY,78.4
+Monroe County,New York,71450,13.4,5.3,NY,78.4
+Montgomery County,New York,58033,15.1,5.9,NY,75.0
+Nassau County,New York,137709,5.4,4.6,NY,82.4
+New York County,New York,99880,15.8,6.8,NY,80.4
+New York County,New York,99880,15.8,6.8,NY,84.7
+Niagara County,New York,65882,13.0,5.8,NY,75.8
+Oneida County,New York,66402,14.4,4.4,NY,76.6
+Onondaga County,New York,71479,13.9,5.6,NY,78.0
+Ontario County,New York,76603,9.0,4.0,NY,79.6
+Orange County,New York,91806,13.0,5.3,NY,79.7
+Orleans County,New York,61069,12.6,6.1,NY,77.6
+Oswego County,New York,65054,17.1,7.3,NY,76.3
+Otsego County,New York,65778,13.0,5.0,NY,77.6
+Putnam County,New York,120970,6.3,4.4,NY,82.3
+Queens County,New York,82431,11.7,7.0,NY,83.6
+Rensselaer County,New York,83734,11.5,5.6,NY,77.7
+Richmond County,New York,96185,10.4,5.4,NY,80.2
+Rockland County,New York,106173,15.1,6.2,NY,82.8
+St. Lawrence County,New York,58339,17.0,6.3,NY,76.6
+Saratoga County,New York,97038,6.6,3.5,NY,80.3
+Schenectady County,New York,75056,11.6,6.0,NY,77.0
+Schoharie County,New York,71479,10.1,5.3,NY,79.1
+Schuyler County,New York,61316,15.8,5.7,NY,75.8
+Seneca County,New York,64050,13.1,4.5,NY,77.5
+Steuben County,New York,62506,13.4,6.3,NY,76.6
+Suffolk County,New York,122498,6.5,4.8,NY,80.3
+Sullivan County,New York,67841,14.8,7.2,NY,76.8
+Tioga County,New York,70427,10.2,5.6,NY,78.9
+Tompkins County,New York,69995,16.0,4.7,NY,80.6
+Ulster County,New York,77197,14.7,5.1,NY,79.3
+Warren County,New York,74531,8.6,4.2,NY,78.3
+Washington County,New York,68703,11.4,5.1,NY,76.8
+Wayne County,New York,71007,11.0,4.3,NY,77.6
+Westchester County,New York,114651,8.5,6.0,NY,83.4
+Wyoming County,New York,65066,10.7,4.1,NY,78.9
+Yates County,New York,63974,14.2,3.2,NY,78.4
