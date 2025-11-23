@@ -1,143 +1,171 @@
-True Prosperity Index (TPI) – CA & NY Counties
+# True Prosperity Index (TPI) – CA & NY Counties  
+### Final Data Science Bootcamp Project
 
-Final Data Science Bootcamp Project
+---
 
-📌 Overview
+## 📌 Overview  
+This project creates a county-level socioeconomic dataset for California and New York, combining:  
+- Median household income  
+- Poverty rate  
+- Unemployment rate  
+- Life expectancy  
 
-This project creates a county-level socioeconomic dataset for California and New York, combining median household income, poverty rate, unemployment rate, and life expectancy. These indicators support building a True Prosperity Index (TPI), conducting clustering analyses, running regression models, and generating geospatial visualizations.
+These indicators support:  
+- Constructing a **True Prosperity Index (TPI)**  
+- Performing **clustering** (Low / Moderate / High Prosperity)  
+- Running **regression models**  
+- Building **geospatial visualizations**  
 
-The dataset is built entirely from publicly available sources: American Community Survey (ACS) 2022 and County Health Rankings (CHR) 2024/2025.
+All data is sourced from publicly available datasets:  
+- **American Community Survey (ACS) 2022**  
+- **County Health Rankings (CHR) 2024/2025**
 
-🎯 Goal
+---
 
-The goal is to understand local wellbeing in a way that reflects people’s lived experiences, not just economic indicators like GDP or the stock market. Cities and communities require ground-level data to reveal patterns in prosperity and identify areas needing intervention.
+## 🎯 Goal  
+The goal is to measure local wellbeing in a way that reflects people’s lived experiences—not just macroeconomic indicators like GDP or the stock market.  
+The dataset enables deeper understanding of prosperity patterns and helps identify regions needing intervention.
 
-📂 Repository Structure
+---
+
+## 📂 Repository Structure  
 
 ├── data/
-│   ├── county_data_final.csv       # The cleaned, merged dataset used for analysis
-│   └── cb_2018_us_county_500k/     # Shapefiles for US Census tracts/counties (for GeoPandas)
+│ ├── county_data_final.csv # Cleaned, merged dataset
+│ └── cb_2018_us_county_500k/ # U.S. Census shapefiles (for GeoPandas)
 │
 ├── notebooks/
-│   └── Final_Project_Notebook.ipynb # Main analysis code (TPI construction, Clustering, Regression)
+│ └── Final_Project_Notebook.ipynb # Full analysis: TPI, Clustering, Regression
 │
 ├── presentation/
-│   ├── TPI_Project_Presentation.pptx
-│   └── TPI_Project_Presentation.pdf
+│ ├── TPI_Project_Presentation.pptx
+│ └── TPI_Project_Presentation.pdf
 │
 └── README.md
 
 
-📊 Data Sources
+---
 
-American Community Survey (ACS 2022)
+## 📊 Data Sources  
 
-S1901: Income (Median household income)
+### **American Community Survey (ACS 2022)**  
+- `S1901` – Median household income  
+- `S1701` – Percent below poverty  
+- `S2301` – Unemployment rate  
 
-S1701: Poverty (Percent below poverty)
+### **County Health Rankings (CHR 2024/2025)**  
+- Life Expectancy by County  
 
-S2301: Employment (Unemployment rate)
+### **Federal Reserve Economic Data (FRED)**  
+- S&P 500 Daily Values  
+  *(Used to compare market volatility vs. stability of community prosperity)*  
 
-County Health Rankings (2024/2025)
+---
 
-Life expectancy by county
+## 🛠 Step-by-Step Dataset Creation  
 
-FRED (Federal Reserve Economic Data)
+### **1. Collecting ACS Data**  
+ACS subject tables (S1901, S1701, S2301) were downloaded for CA and NY.  
 
-S&P 500 Daily Values (used for market vs. community comparison)
+**Issue:**  
+ACS tables were in **wide format** (each county = a column).  
 
-🛠 Step-by-Step Dataset Creation
+**Solution:**  
+Custom Python functions were written to:  
+- Identify the correct value rows (e.g., *“Median income (dollars)”*)  
+- Select columns ending in `!!Estimate`  
+- Parse county/state names from column headers  
+- Standardize output into tidy tabular format  
 
-1. Collecting ACS Data
+---
 
-ACS Subject Tables (S1901, S1701, S2301) were downloaded for all counties in CA and NY. These tables were originally in wide-format.
+### **2. Cleaning & Standardizing County Names**  
+**Issue:**  
+County names differed across sources (e.g., *“Los Angeles County, California”*, *“Los Angeles”*).  
 
-Issue: Each county was a column, not a row.
+**Solution:**  
+- Removed state suffixes  
+- Ensured consistent `"County"` suffix  
+- Standardized naming conventions across all datasets  
 
-Solution: Custom extraction functions were written to:
+---
 
-Identify the correct indicator row (e.g., “Median income (dollars)”).
+### **3. Adding State Abbreviations**  
+Mapped state names into two-letter abbreviations:  
+- California → **CA**  
+- New York → **NY**  
 
-Select columns ending in “!!Estimate”.
+---
 
-Split the county and state from the column names.
+### **4. Collecting Life Expectancy (CHR)**  
+Life expectancy CSVs were downloaded for CA and NY.  
 
-Standardize the output format.
+**Issue:**  
+Column name was `"County Value**"` instead of expected `"life_expectancy"`.  
 
-2. Cleaning & Standardizing County Names
+**Solution:**  
+- Renamed `"County Value**"` → `life_expectancy`  
+- Ensured all counties had a consistent `"County"` suffix  
 
-Issue: County names varied across sources (e.g., “Los Angeles County, California” vs “Los Angeles”).
+---
 
-Solution: Removed state suffixes, ensured consistent "County" suffix, and standardized naming conventions.
+### **5. Merging All Data Sources**  
+Merged ACS income, poverty, and unemployment with CHR life expectancy using:  
 
-3. Adding State Abbreviations
 
-Mapped "California" → "CA" and "New York" → "NY" to assist in merging and mapping.
 
-4. Collecting Life Expectancy (CHR)
+Numeric data was cleaned by removing:  
+- Commas from income values  
+- Percentage signs from poverty/unemployment indicators  
 
-Downloaded CA and NY life expectancy CSV files from the County Health Rankings website.
+---
 
-Issue: Column names did not match expected values (used “County Value**”).
+## 📝 Final Dataset Output  
 
-Solution: Renamed “County Value**” to life_expectancy.
+The processed file `county_data_final.csv` contains:
 
-Issue: Some counties lacked the "County" suffix.
+| Column Name         | Description                                           |
+|---------------------|-------------------------------------------------------|
+| `county_name`       | County name (e.g., "Alameda County")                  |
+| `state_abbr`        | State abbreviation (`CA` or `NY`)                     |
+| `median_income`     | Median Household Income (USD)                         |
+| `poverty_rate`      | Percent below poverty (%)                             |
+| `unemployment_rate` | Unemployment rate (%)                                 |
+| `life_expectancy`   | Average life expectancy (years)                       |
 
-Solution: Standardized naming by appending “County” consistently.
+---
 
-5. Merging All Data Sources
+## 🚀 Usage & Analysis  
 
-Merged ACS income, poverty, and unemployment data with life expectancy using county_name + state_abbr. Cleaned numeric fields by removing commas and percentage signs.
+The notebook `Final_Project_Notebook.ipynb` performs:
 
-📝 Final Dataset Output
+### **✔ Standardization**  
+Converts all raw metrics into Z-scores for comparability.
 
-The processed file (county_data_final.csv) contains the following columns:
+### **✔ TPI Construction**  
+Builds the composite True Prosperity Index (scaled 0–100).
 
-Column Name
+### **✔ Clustering**  
+Uses K-Means to assign each county into:  
+- **Low Prosperity**  
+- **Moderate Prosperity**  
+- **High Prosperity**
 
-Description
+### **✔ Modeling**  
+Logistic Regression identifies which indicators most strongly predict high prosperity.
 
-county_name
+### **✔ Visualization**  
+- TPI distribution  
+- Prosperity tiers  
+- Logistic regression coefficients  
+- S&P 500 vs. TPI stability  
+- Geospatial maps using U.S. Census shapefiles  
 
-Name of the county (e.g., "Alameda County")
+---
 
-state_abbr
+## 📦 Requirements  
 
-State abbreviation (CA or NY)
+Install all dependencies using:
 
-median_income
-
-Median Household Income ($)
-
-poverty_rate
-
-Percentage of population below poverty line (%)
-
-unemployment_rate
-
-Unemployment rate (%)
-
-life_expectancy
-
-Average life expectancy in years
-
-🚀 Usage & Analysis
-
-The Jupyter Notebook (Final_Project_Notebook.ipynb) performs the following:
-
-Standardization: Converts all metrics to Z-scores.
-
-TPI Construction: Calculates the composite index (0-100 scale).
-
-Clustering: Uses K-Means to identify Low, Moderate, and High prosperity tiers.
-
-Modeling: Uses Logistic Regression to identify drivers of prosperity.
-
-Visualization: Compares TPI against S&P 500 data and maps regional trends.
-
-Requirements
-
-To run the notebook, ensure you have the following Python libraries installed:
-
+```bash
 pip install pandas numpy matplotlib seaborn scikit-learn geopandas
